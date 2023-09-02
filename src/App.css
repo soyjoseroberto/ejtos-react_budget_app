@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.btn-increment {
+  background-color: green;
+  border-color: green;
+  border-radius: 50%;
+  color: white;
+  font-size: 2rem;
+  width: 3rem;
+}

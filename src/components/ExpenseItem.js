@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import { TiDelete } from "react-icons/ti";
+import { FaPlusCircle, FaTimesCircle } from "react-icons/fa";
+
 import { AppContext } from "../context/AppContext";
 
 const ExpenseItem = (props) => {
@@ -32,26 +33,18 @@ const ExpenseItem = (props) => {
         {props.cost}
       </td>
       <td>
-        <button
-          className="btn-increment"
+        <FaPlusCircle
+          color="green"
+          size="2.2em"
           onClick={(event) => increaseAllocation(props.name)}
-        >
-          +
-        </button>
+        ></FaPlusCircle>
       </td>
       <td>
-        <TiDelete
-          size="1.5em"
-          style={{
-            "background-color": "red",
-            "border-color": "red",
-            "border-radius": "50%",
-            color: "white",
-            "font-size": "2rem",
-            width: "3rem",
-          }}
+        <FaTimesCircle
+          color="red"
+          size="2.2em"
           onClick={handleDeleteExpense}
-        ></TiDelete>
+        ></FaTimesCircle>
       </td>
     </tr>
   );
